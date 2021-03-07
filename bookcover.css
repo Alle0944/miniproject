@@ -1,0 +1,123 @@
+
+@font-face{
+	font-family: 'caslon';
+	src:url("/fonts/ACaslonPro-Semibold copy.otf")format('otf');
+}
+
+
+
+
+
+.book{
+	height: 600px;
+	width: 404px;
+	background: #e22627;
+	border: 1px solid black;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+}
+@keyframes eyerotate{
+	0% {transform: rotate(0deg);}
+	100% {transform: rotate(315deg);}
+	
+}
+.eye{
+	background: white;
+	height: 375px;
+	width: 375px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: rotate(-45deg);
+	margin-left: -187px;
+	margin-top: -187px;
+	border-radius: 65% 0%;
+	transform-origin: 50% 50%;
+	animation: eyerotate 3s  linear;
+
+}
+.pupil{
+	width: 178px;
+	height: 178px;
+	background: #231f20;
+	border-radius: 50%;
+	border: 75px solid #00aff0;
+	position: absolute;
+	left: 50%;
+	top:50%;
+	transform: translate(-50%, -50%);
+
+}
+@keyframes fadein{
+	0% {opacity: 0;}
+	100%{opacity: 1;}
+}
+@keyframes fadeindelay{
+	0%{opacity: 0;}
+	50%{opacity: 0;}
+	100%{opacity: 1;}
+
+}
+.george{
+	font-family: 'Didot';
+	letter-spacing: 5px;
+	position: absolute;
+	text-align: center;
+	left: 50%;
+	top: 15%;
+	transform: translateX(-50%);
+	animation: fadein 5s;
+}
+.orwell{
+	font-family: 'Didot';
+	letter-spacing: 5px;
+	position: absolute;
+	text-align: center;
+	left: 50%;
+	top: 77%;
+	transform: translateX(-50%);
+	animation: fadein 5s;
+}
+.numbers{
+	font-family: 'Palatino';
+	font-size: 50px;
+	color: white;
+	letter-spacing: 5px;
+	position: absolute;
+	left: 50%;
+	top: 43%;
+	transform: translate(-50%, -50%);
+	animation: fadeindelay 5s;
+
+
+}
+.record{
+	background: red;
+	height: 20px;
+	width: 20px;
+	border-radius: 100%;
+	position: absolute;
+	left:65%;
+	top:33%;
+	opacity: 0%;
+}
+@keyframes blink{
+	0%{opacity: 0;}
+	50%{opacity: 1;}
+	100%{opacity: 0;}
+}
+	
+
+
+.book:hover .record{
+	animation: blink 2.5s infinite;
+}
+
+
+
+
+
+
